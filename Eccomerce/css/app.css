@@ -1,0 +1,22 @@
+h1 {
+ color: #000;  
+}
+h1 span {
+    color:#037bc0
+}
+
+h2 span {
+   clear: green;
+}
+
+/* En CSS, los estilos con mayor especificidad tienen más prioridad. El orden va así: primero los estilos en línea (style=""), luego los selectores de ID (#id), después las clases, atributos y pseudoclases (.clase, [type], :hover), y por último los elementos (div, h1, etc.) y pseudoelementos (::before). Si hay conflicto, gana el que tenga mayor especificidad. Si están empatados, se aplica el que esté más abajo en el archivo CSS.  style id   class   etiqueta
+        0    0     0         0
+        .claseEjempplo div{}  = 0011 porque tiene una clase y una etiqueta  
+*/
+
+.navegacion{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #037bc0;
+}
