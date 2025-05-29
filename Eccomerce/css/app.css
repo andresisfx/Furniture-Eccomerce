@@ -3,18 +3,50 @@ html {
     /*!ESTO ES SOLO PARA RECORDAR, YA QQUE TODO ESTO YA ESTÁ INCLUUIDO EN EL NORMALIZE.CSS*/
   
 }
+*,*:before*,*:after {
+    box-sizing: inherit; /** Permite que todos los elementos hereden el box-sizing del html, lo que significa que todos los elementos tendrán el mismo comportamiento de cálculo de ancho y alto */
+    margin: 0; /** Elimina el margen por defecto de todos los elementos */
+    padding: 0; /** Elimina el padding por defecto de todos los elementos */
+}
 
+/*estilos globales*/
+a {
+    text-decoration: none; /** Elimina el subrayado de los enlaces */
+    color: #000; /** Establece el color del texto de los enlaces */
+}
+
+.contenedor{
+    max-width: 1200px; /** Establece un ancho máximo de 1200px */
+    margin: 0 auto; /** Centra el contenedor horizontalmente */
+    padding: 20px; /** Añade un padding de 20px alrededor del contenedor */
+}
+
+.nav-contenedor {
+   
+border-top: 1px solid #ccc; /** Añade un borde superior de 1px de color gris claro */
+ 
+}
+
+.nav-principal {
+   max-width: 1200px; /** Establece un ancho máximo de 1200px */
+   margin:0 auto 0 auto; /** Centra el elemento horizontalmente */
+   padding:20px 0; 
+   display: flex;
+   justify-content: space-evenly;
+   
+}
 
 .nombre-sitio{
     margin-top: 50px;
     margin-bottom: 50px;
+    text-align: center;
 }
 .nombre-sitio span {
     color: #037bc0;
     font-weight: bold;
     
 }
-
+/*!ESPECIFICIDAD EN CSS*/
 /** En CSS, los estilos con mayor especificidad tienen más prioridad. El orden va así: primero los estilos en línea (style=""), luego los selectores de ID (#id), después las clases, atributos y pseudoclases (.clase, [type], :hover), y por último los elementos (div, h1, etc.) y pseudoelementos (::before). Si hay conflicto, gana el que tenga mayor especificidad. Si están empatados, se aplica el que esté más abajo en el archivo CSS.  style id   class   etiqueta
         0    0     0         0
         .claseEjempplo div{}  = 0011 porque tiene una clase y una etiqueta  
@@ -24,12 +56,10 @@ html {
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    color: #037bc0;
+    color: #000000;
 }
 /*esta clase se aplica a las etiquetas que tienen la clase navegacion y color-rojo*/
-.color-rojo{
-  color:red
-}
+
 
 .sobre-nosotros{
   width:300px;
@@ -37,8 +67,27 @@ html {
   background-color: #9e1818;
 }
 
+/*!DISPLAY*/
 /**diplay inline-block permite que el elemento se comporte como un bloque pero se alinee en línea con otros elementos, permitiendo establecer dimensiones y márgenes. Es útil para elementos que necesitan ser tratados como bloques pero también alineados horizontalmente, como botones o imágenes dentro de un texto.*/ 
 /** diplay inline permite que el elemento se alinee en línea con otros elementos, pero no permite establecer dimensiones ni márgenes. Es útil para elementos que deben fluir dentro del texto, como enlaces o etiquetas.*/
 /** diplay block permite que el elemento ocupe todo el ancho disponible y comience en una nueva línea. Es útil para elementos que deben ser tratados como bloques independientes, como párrafos o encabezados.*/
 /** nav tiene display inline por defecto, lo que significa que se alinea en línea con otros elementos y no ocupa todo el ancho disponible*/
 /**la etiqueta p tiene display block por defecto, lo que significa que ocupa todo el ancho disponible y comienza en una nueva línea*/
+
+
+/*TODO:background image*/
+.hero{
+    background-image: url("../Imagenes-Ecommerce/principal.jpg");
+    height: 550px;
+    background-repeat: no-repeat; /** Evita que la imagen de fondo se repita */
+    background-size: cover; /** Asegura que la imagen cubra todo el contenedor */
+}
+
+
+/*!FLEXBOX*/
+/**JUSTIFY-CONTENT row : alinea los elementos horizontalmente*/
+/**JUSTIFY-CONTENT column: alinea los elementos verticalmente */
+/**ALIGN-ITEMS row: alinea los elementos verticalmente */
+/**ALIGN-ITEMS column: alinea los elementos horizontalmente */
+
+/*!GRID*/
