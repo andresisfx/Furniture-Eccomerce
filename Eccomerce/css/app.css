@@ -1,22 +1,44 @@
-h1 {
- color: #000;  
-}
-h1 span {
-    color:#037bc0
-}
-
-h2 span {
-   clear: green;
+html {
+    box-sizing: border-box; /** Permite que el ancho y alto de los elementos se calculen incluyendo el padding y el borde ejm: width:300; padding:25 lo que hará es restarle 25px padding al total del width interior para que en total sean 300px */
+    /*!ESTO ES SOLO PARA RECORDAR, YA QQUE TODO ESTO YA ESTÁ INCLUUIDO EN EL NORMALIZE.CSS*/
+  
 }
 
-/* En CSS, los estilos con mayor especificidad tienen más prioridad. El orden va así: primero los estilos en línea (style=""), luego los selectores de ID (#id), después las clases, atributos y pseudoclases (.clase, [type], :hover), y por último los elementos (div, h1, etc.) y pseudoelementos (::before). Si hay conflicto, gana el que tenga mayor especificidad. Si están empatados, se aplica el que esté más abajo en el archivo CSS.  style id   class   etiqueta
+
+.nombre-sitio{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.nombre-sitio span {
+    color: #037bc0;
+    font-weight: bold;
+    
+}
+
+/** En CSS, los estilos con mayor especificidad tienen más prioridad. El orden va así: primero los estilos en línea (style=""), luego los selectores de ID (#id), después las clases, atributos y pseudoclases (.clase, [type], :hover), y por último los elementos (div, h1, etc.) y pseudoelementos (::before). Si hay conflicto, gana el que tenga mayor especificidad. Si están empatados, se aplica el que esté más abajo en el archivo CSS.  style id   class   etiqueta
         0    0     0         0
         .claseEjempplo div{}  = 0011 porque tiene una clase y una etiqueta  
 */
 
-.navegacion{
+.enlace{
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
     color: #037bc0;
 }
+/*esta clase se aplica a las etiquetas que tienen la clase navegacion y color-rojo*/
+.color-rojo{
+  color:red
+}
+
+.sobre-nosotros{
+  width:300px;
+  padding: 25px;
+  background-color: #9e1818;
+}
+
+/**diplay inline-block permite que el elemento se comporte como un bloque pero se alinee en línea con otros elementos, permitiendo establecer dimensiones y márgenes. Es útil para elementos que necesitan ser tratados como bloques pero también alineados horizontalmente, como botones o imágenes dentro de un texto.*/ 
+/** diplay inline permite que el elemento se alinee en línea con otros elementos, pero no permite establecer dimensiones ni márgenes. Es útil para elementos que deben fluir dentro del texto, como enlaces o etiquetas.*/
+/** diplay block permite que el elemento ocupe todo el ancho disponible y comience en una nueva línea. Es útil para elementos que deben ser tratados como bloques independientes, como párrafos o encabezados.*/
+/** nav tiene display inline por defecto, lo que significa que se alinea en línea con otros elementos y no ocupa todo el ancho disponible*/
+/**la etiqueta p tiene display block por defecto, lo que significa que ocupa todo el ancho disponible y comienza en una nueva línea*/
