@@ -44,6 +44,10 @@ h3{
     margin: 0 auto; /** Centra el contenedor horizontalmente */
     padding: 2rem; /** Añade un padding de 20px alrededor del contenedor */
 }
+/*todo : Utilidades */
+.text-center {
+    text-align: center; /** Centra el texto dentro del elemento */
+}
 /*TODO:  estilos de navegación*/
 /**contenedor principal barra de navegación*/
 .nav-contenedor {
@@ -189,3 +193,31 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
 
 
 /*todo listado de productos */
+
+.contenido-principal{
+    padding-top: 5rem;
+}
+
+.producto{
+    background-color: #037bc0; /** Establece el color de fondo del producto */
+}
+.texto-producto{
+    padding: 2rem; /** Añade un padding de 20px alrededor del texto del producto */
+    color: #fff; /** Establece el color del texto en blanco */
+    text-align: center; /** Centra el texto dentro del elemento */
+}
+.texto-producto .precio{
+    font-size: 2rem; /** Establece el tamaño de fuente del precio */
+    font-weight: 900; /** Hace que el precio sea negrita */
+    margin-bottom: 1rem; /** Añade un margen inferior de 10px */
+
+}
+.texto-producto h3{
+    margin: 0; /** Elimina el margen por defecto del encabezado */
+}
+.texto-producto p{
+    margin: 0 0 0.5rem 0;
+}
+.texto-producto a{
+   
+}
