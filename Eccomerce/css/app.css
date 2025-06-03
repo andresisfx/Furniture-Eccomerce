@@ -1,7 +1,8 @@
 html {
     box-sizing: border-box; /** Permite que el ancho y alto de los elementos se calculen incluyendo el padding y el borde ejm: width:300; padding:25 lo que hará es restarle 25px padding al total del width interior para que en total sean 300px */
     /*!ESTO ES SOLO PARA RECORDAR, YA QQUE TODO ESTO YA ESTÁ INCLUUIDO EN EL NORMALIZE.CSS*/
-  
+    font-size: 62.5%; /** Establece el tamaño de fuente base en 62.5% del tamaño de fuente por defecto del navegador, lo que facilita el cálculo de unidades rem (1rem = 10px) */
+    /** Esto es útil para que 1rem sea igual a 10px, facilitando el uso de unidades rem en lugar de px */
 }
 *,*:before*,*:after {
     box-sizing: inherit; /** Permite que todos los elementos hereden el box-sizing del html, lo que significa que todos los elementos tendrán el mismo comportamiento de cálculo de ancho y alto */
@@ -9,7 +10,7 @@ html {
     padding: 0; /** Elimina el padding por defecto de todos los elementos */
 }
 
-/*estilos globales*/
+/*TODO:  estilos globales*/
 a {
     text-decoration: none; /** Elimina el subrayado de los enlaces */
     color: #000; /** Establece el color del texto de los enlaces */
@@ -21,41 +22,55 @@ img {
 }
 body{
     font-family: "Raleway", sans-serif; 
+    font-size: 1.6rem; /** Establece el tamaño de fuente base en 16px (1.6rem) */
+    line-height: 1.5; /** Establece la altura de línea en 1.5 veces el tamaño de fuente, mejorando la legibilidad */
+}
+h1,h2,h3{
+    font-family: "Playfair Display", serif; /** Establece la fuente Playfair Display para los encabezados h1 */
 }
 h1{
-    font-family: "Playfair Display", serif; /** Establece la fuente Playfair Display para los encabezados h1 */
+    font-size: 4rem; /** Establece el tamaño de fuente del encabezado h1 */
+    margin: 0 0 2rem 0; /** Añade un margen inferior de 20px */
+}
+h2{
+    font-size: 3rem; /** Establece el tamaño de fuente del encabezado h2 */
+}
+h3{
+    font-size: 2rem;
 }
 
 .contenedor{
-    max-width: 1200px; /** Establece un ancho máximo de 1200px */
+    max-width: 120rem; /** Establece un ancho máximo de 1200px */
     margin: 0 auto; /** Centra el contenedor horizontalmente */
-    padding: 20px; /** Añade un padding de 20px alrededor del contenedor */
+    padding: 2rem; /** Añade un padding de 20px alrededor del contenedor */
 }
-
+/*TODO:  estilos de navegación*/
+/**contenedor principal barra de navegación*/
 .nav-contenedor {
    
-border-top: 1px solid #ccc; /** Añade un borde superior de 1px de color gris claro */
+border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gris claro */
  
 }
 
 .nav-principal {
-   max-width: 1200px; /** Establece un ancho máximo de 1200px */
+   max-width: 120rem; /** Establece un ancho máximo de 1200px */
    margin:0 auto 0 auto; /** Centra el elemento horizontalmente */
-   padding:20px 0; 
+   padding:2rem 0; 
    display: flex;
    justify-content: space-evenly;
    
 }
 
 .nombre-sitio{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    
+    margin-bottom: 5rem;
     text-align: center;
+    font-size: 4rem; /** Establece el tamaño de fuente del nombre del sitio */
 }
 .nombre-sitio span {
     color: #037bc0;
     font-weight: bold;
-    
+    font-size: 4rem;
 }
 /*!ESPECIFICIDAD EN CSS*/
 /** En CSS, los estilos con mayor especificidad tienen más prioridad. El orden va así: primero los estilos en línea (style=""), luego los selectores de ID (#id), después las clases, atributos y pseudoclases (.clase, [type], :hover), y por último los elementos (div, h1, etc.) y pseudoelementos (::before). Si hay conflicto, gana el que tenga mayor especificidad. Si están empatados, se aplica el que esté más abajo en el archivo CSS.  style id   class   etiqueta
@@ -72,11 +87,6 @@ border-top: 1px solid #ccc; /** Añade un borde superior de 1px de color gris cl
 /*esta clase se aplica a las etiquetas que tienen la clase navegacion y color-rojo*/
 
 
-.sobre-nosotros{
-  width:300px;
-  padding: 25px;
-  background-color: #9e1818;
-}
 
 /*!DISPLAY*/
 /**diplay inline-block permite que el elemento se comporte como un bloque pero se alinee en línea con otros elementos, permitiendo establecer dimensiones y márgenes. Es útil para elementos que necesitan ser tratados como bloques pero también alineados horizontalmente, como botones o imágenes dentro de un texto.*/ 
@@ -89,9 +99,10 @@ border-top: 1px solid #ccc; /** Añade un borde superior de 1px de color gris cl
 /*TODO:background image*/
 .hero{
     background-image: url("../Imagenes-Ecommerce/principal.jpg");
-    height: 550px;
+    height: 55rem;
     background-repeat: no-repeat; /** Evita que la imagen de fondo se repita */
     background-size: cover; /** Asegura que la imagen cubra todo el contenedor */
+    background-position: center center; /** Centra la imagen de fondo, también podemos situal arriba con top, abajo con : bottom, a la derecha   */
 }
 
 
@@ -114,23 +125,67 @@ border-top: 1px solid #ccc; /** Añade un borde superior de 1px de color gris cl
 /**grid-area: header; asigna el área de la cuadrícula al elemento, permitiendo que se posicione en una ubicación específica dentro del grid*/
 .categorias h2{
   text-align: center; /** Centra el texto del encabezado */
-  margin-bottom: 20px; /** Añade un margen inferior de 20px */
+  margin-bottom: 2rem; /** Añade un margen inferior de 20px */
+  padding-top: 5rem;
 }
 .categoria a{
  text-align: center; 
  display: block; /** Agregamos esto ya que la etiqueta <a/> por defecto tiene display inline y no deja desplazarla a los lados  */
- padding: 10px;
+ padding: 1rem;
 }
 .categoria a:hover{
     background-color: #037bc0; /** Cambia el color de fondo al pasar el cursor */
     color: #fff; /** Cambia el color del texto al pasar el cursor */
-    padding: 10px; /** Añade un padding de 10px al pasar el cursor */
-    border-bottom-right-radius: 10px; /** Añade un radio de 10px al borde inferior derecho */
+    padding: 1rem; /** Añade un padding de 10px al pasar el cursor */
+    border-bottom-right-radius: 1rem; /** Añade un radio de 10px al borde inferior derecho */
 }
 .listado-categorias{
     display: grid; /** Utiliza grid para organizar los elementos */
     grid-template-columns: repeat(3, 2fr); /** Crea 3 columnas de igual tamaño */
-
-    gap: 20px; /** Establece un espacio de 20px entre las columnas;  existe column-gap y row-gap pero gap aplica para las dos  */
-    margin-top: 50px; /** Añade un margen superior de 50px */
+    gap: 2rem; /** Establece un espacio de 20px entre las columnas;  existe column-gap y row-gap pero gap aplica para las dos  */
+    margin-top: 5rem; /** Añade un margen superior de 50px */
 }
+
+/*TODO:  sección  "sobre nosotros  */
+
+.sobre-nosotros{
+    background-image: linear-gradient(to right,transparent 50% , rgb(216, 215, 215) 50%, #037bc0 50%),url(/Imagenes-Ecommerce/nosotros.jpg); 
+    background-repeat: no-repeat; /** Evita que la imagen de fondo se repita */
+    padding: 10rem 0;/** Añade un padding de 100px en la parte superior e inferior y así la imagen se ve  más alta lo mismo que el gradiente*/
+    background-position: left center; /** Centra la imagen de fondo a la izquierda */
+    background-size: 100%,120rem; /** aquí coloca 100% al linear gradiente que está de primero y luego le da los 120 rem a la url que se encuentra después */
+}
+
+.sobre-nosotros-grid{
+    display: grid; /** Utiliza grid para organizar los elementos */
+    grid-template-columns: repeat(2, 1fr); /** Crea 2 columnas de igual tamaño */
+
+    column-gap: 4rem;  /**Establece un espacio de 40px entre las columnas , pero el mismo efecto se logra en la siguiente clase donde le añadimos un pading de 2 rem, pero en css grid se suelen utilizar gaps y no padding */
+}
+
+/*Todo:  texto sobre nosotros con display-grid */
+/* .texto-sobre-nosotros{
+    grid-column: 2 / 3; /** Coloca el texto en la segunda columna */
+
+   /** color: #fff;  Establece el color del texto en blanco 
+} */
+
+
+/*todo: sobre nosotros con flexbox */
+.sobre-nosotros-grid {
+ display:flex;
+ justify-content: flex-end; /** Alinea los elementos al final del contenedor */
+}
+.contenedor-texto{
+     flex-basis: 46%; /** Establece el ancho del contenedor de texto al 46% del contenedor principal , esto con el fin de que el texto se vea más a la derecha */
+
+     padding-left: 10rem; /** Añade un padding de 100px a la izquierda para separar el texto de la imagen */
+     color: #fff;
+    
+}
+
+/*!CUANDO UTILIZAMOS FLEXBOX Y GRID ??*/
+/*? Cuando utilizamos flexbox, es ideal para alinear elementos en una sola dimensión (horizontal o vertical), mientras que grid es más adecuado para diseños bidimensionales, permitiendo organizar elementos en filas y columnas. Por ejemplo, si queremos alinear un menú de navegación horizontalmente, usaríamos flexbox, pero si queremos crear un diseño de cuadrícula con imágenes y descripciones, usaríamos grid.*/
+
+
+/*todo listado de productos */
