@@ -44,10 +44,23 @@ h3{
     margin: 0 auto; /** Centra el contenedor horizontalmente */
     padding: 2rem; /** Añade un padding de 20px alrededor del contenedor */
 }
+.btn{
+     background-color: #8cbc00; /** Establece el color de fondo del enlace */
+    color: #fff; /** Establece el color del texto del enlace en blanco */
+    padding: 1rem; /** Añade un padding de 10px alrededor del enlace */
+    display: block; /** Hace que el enlace se comporte como un bloque en línea, permitiendo establecer dimensiones y márgenes */
+    font-weight: 900;
+    transition:background-color .3s ease; /** Añade una transición suave al color de fondo del enlace */
+}
+.btn:hover{
+    background-color: #5a7801; /** Cambia el color de fondo al pasar el cursor */
+}
 /*todo : Utilidades */
 .text-center {
     text-align: center; /** Centra el texto dentro del elemento */
 }
+
+
 /*TODO:  estilos de navegación*/
 /**contenedor principal barra de navegación*/
 .nav-contenedor {
@@ -198,6 +211,18 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
     padding-top: 5rem;
 }
 
+.listado-productos{
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); /** Crea 6 columnas de igual tamaño */
+ 
+}
+.producto:nth-child(1){
+ /*? grid-column: 1/7;  Hace que el primer producto ocupe las 6 columnas */
+ grid-column-start: 1; /** Establece el inicio de la columna en la primera columna */
+ grid-column-end: 7; /** Establece el final de la columna en la séptima columna, lo que hace que ocupe las 6 columnas */
+
+}
+
 .producto{
     background-color: #037bc0; /** Establece el color de fondo del producto */
 }
@@ -217,7 +242,4 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
 }
 .texto-producto p{
     margin: 0 0 0.5rem 0;
-}
-.texto-producto a{
-   
 }
