@@ -214,13 +214,44 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
 .listado-productos{
     display: grid; 
     grid-template-columns: repeat(6, 1fr); /** Crea 6 columnas de igual tamaño */
+    /**column-gap: 2rem;  Establece un espacio de 20px entre las columnas */
+   /** row-gap: 2rem;  Establece un espacio de 20px entre las filas */
+   gap: 2rem; /** Establece un espacio de 20px entre las filas y columnas, osea remplaza las dos lineas anteriores */
+
  
 }
 .producto:nth-child(1){
  /*? grid-column: 1/7;  Hace que el primer producto ocupe las 6 columnas */
  grid-column-start: 1; /** Establece el inicio de la columna en la primera columna */
  grid-column-end: 7; /** Establece el final de la columna en la séptima columna, lo que hace que ocupe las 6 columnas */
+ display: grid;
+ grid-template-columns: 3fr 1fr;/** Crea 2 columnas de igual tamaño dentro del primer producto */
 
+}
+.producto:nth-child(1)img{
+    height: 43rem;
+    width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
+    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+}
+.producto:nth-child(2){
+    grid-column-start: 1; /** Establece el inicio de la columna en la primera columna */
+    grid-column-end: 4; /** Establece el final de la columna en la cuarta columna, lo que hace que ocupe las 3 primeras columnas */
+}
+.producto:nth-child(3){ 
+    grid-column-start: 4; 
+    grid-column-end: 7; 
+}
+.producto:nth-child(4){
+    grid-column-start: 1; 
+    grid-column-end: 3;
+}
+.producto:nth-child(5){
+    grid-column-start: 3; 
+    grid-column-end: 5;
+}
+.producto:nth-child(6){
+    grid-column-start: 5; 
+    grid-column-end: 7;
 }
 
 .producto{
