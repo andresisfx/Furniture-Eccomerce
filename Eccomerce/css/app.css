@@ -382,3 +382,20 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
     width: 60rem;
     margin: auto; /** Centra el contenido horizontalmente */
 }
+
+/*!PAGINA GALERIA*/
+.galeria{
+    list-style: none; /** Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0; /** Elimina el padding por defecto de la lista */
+    display: grid; /** Utiliza grid para organizar los elementos */
+    grid-template-columns: repeat(3, 1fr); /** Crea 3 columnas de igual tamaño */
+    gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+
+   
+}
+.galeria img{
+   width: 40rem;
+    height: 40rem; /** Establece una altura de 400px para las imágenes */
+    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+}
