@@ -50,6 +50,7 @@ h3{
     padding: 1rem; /** Añade un padding de 10px alrededor del enlace */
     display: block; /** Hace que el enlace se comporte como un bloque en línea, permitiendo establecer dimensiones y márgenes */
     font-weight: 900;
+    text-align: center; /** Centra el texto dentro del enlace */
     transition:background-color .3s ease; /** Añade una transición suave al color de fondo del enlace */
 }
 .btn:hover{
@@ -59,7 +60,10 @@ h3{
 .text-center {
     text-align: center; /** Centra el texto dentro del elemento */
 }
-
+.max-width {
+    max-width: 30rem; /** Establece un ancho máximo de 1200px */
+    /** Centra el elemento horizontalmente */
+}
 
 /*TODO:  estilos de navegación*/
 /**contenedor principal barra de navegación*/
@@ -321,4 +325,60 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
     margin-top: 5rem; /** Añade un margen superior de 20px */
     font-size: 1.4rem; /** Establece el tamaño de fuente del texto de derechos de autor */
     color: #666; /** Establece el color del texto en gris claro */
+}
+
+
+
+
+/*!PAGINA  NOSOTROS*/
+
+/*TODO : Contenido nosotros */
+.contenido-nosotros{
+    display: grid; /** Utiliza grid para organizar los elementos */
+    grid-template-columns: repeat(2, 1fr); /** Crea 2 columnas de igual tamaño */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /** Crea columnas que se ajustan automáticamente al tamaño del contenedor, con un ancho mínimo de 300px y un ancho máximo de 1fr (una fracción del espacio disponible) */
+    gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+    margin-top: 5rem; /** Añade un margen superior de 50px */
+}
+
+.informacion-nosotros{
+    display: flex; /** Utiliza flexbox para organizar los elementos */
+    flex-direction: column; /** Organiza los elementos en una columna */
+    justify-content: center; /** Centra los elementos verticalmente */
+    align-items: center; /** Centra los elementos horizontalmente */
+    padding: 2rem; /** Añade un padding de 20px alrededor del contenedor */
+}
+
+
+/*!PAGINA BLOG*/
+/*todo: CONTENEDOR BLOG*/
+.contenedor-blog{
+    display: grid; /** Utiliza grid para organizar los elementos */
+    grid-template-columns: repeat(2, 1fr); /** Crea 3 columnas de igual tamaño */
+    gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+    margin-top: 5rem; /** Añade un margen superior de 50px */
+}
+.entrada{
+    border-bottom: 1px solid #ccc; /** Añade un borde inferior de 1px de color gris claro */
+    padding-bottom: 2rem; /** Añade un padding de 20px en la parte inferior */
+    margin-bottom: 2rem; /** Añade un margen inferior de 20px */
+}
+.entrada:last-of-type{
+    border-bottom: none; /** Elimina el borde inferior del último elemento */
+}
+.entrada-meta{
+    display: flex; /** Utiliza flexbox para organizar los elementos */
+    justify-content: space-between; /** Distribuye el espacio entre los elementos */
+    align-items: center; /** Centra los elementos verticalmente */
+    margin-bottom: 1rem; /** Añade un margen inferior de 10px */
+}
+.entrada-meta p{
+  font-weight: bold;
+}
+.entrada-meta span{
+   color: #037bc0;
+}
+.contenido-entrada-blog{
+    width: 60rem;
+    margin: auto; /** Centra el contenido horizontalmente */
 }
