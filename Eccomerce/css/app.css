@@ -237,13 +237,28 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
     grid-column-start: 1; /** Establece el inicio de la columna en la primera columna */
     grid-column-end: 4; /** Establece el final de la columna en la cuarta columna, lo que hace que ocupe las 3 primeras columnas */
 }
+.producto:nth-child(2)img{
+    height: 30rem;
+    width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
+    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+}
 .producto:nth-child(3){ 
     grid-column-start: 4; 
     grid-column-end: 7; 
 }
+.producto:nth-child(3)img{
+    height: 30rem;
+    width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
+    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+}
 .producto:nth-child(4){
     grid-column-start: 1; 
     grid-column-end: 3;
+}
+.producto:nth-child(4)img{
+    height: 43rem;
+    width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
+    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
 }
 .producto:nth-child(5){
     grid-column-start: 3; 
@@ -273,4 +288,37 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
 }
 .texto-producto p{
     margin: 0 0 0.5rem 0;
+}
+
+/*TODO:  footer */
+.site-footer{
+    border-top: 1px solid #e1e1e1; /** Añade un borde superior de 1px de color gris claro */
+   margin-top: 2rem;
+    padding-top: 2rem; /** Añade un padding de 20px alrededor del footer */
+}
+.grid-footer{
+    display: flex;
+}
+.grid-footer div{
+    flex: 1; /**Factor de crecimiento: Hace que cada div dentro del footer ocupe el mismo espacio */
+    padding: 1rem; /** Añade un padding de 10px alrededor de cada div */
+}
+.site-footer h3{
+    
+    margin-bottom: .5rem; /** Añade un margen inferior de 10px */
+}
+/*!alternativa con grid */
+.grid-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+}
+.footer-menu a{
+    display: block; /** Hace que el menú del footer se comporte como un bloque en línea, permitiendo establecer dimensiones y márgenes */
+}
+.copy-right{
+    text-align: center; /** Centra el texto dentro del elemento */
+    margin-top: 5rem; /** Añade un margen superior de 20px */
+    font-size: 1.4rem; /** Establece el tamaño de fuente del texto de derechos de autor */
+    color: #666; /** Establece el color del texto en gris claro */
 }
