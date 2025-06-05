@@ -51,9 +51,11 @@ h3{
     display: block; /** Hace que el enlace se comporte como un bloque en línea, permitiendo establecer dimensiones y márgenes */
     font-weight: 900;
     text-align: center; /** Centra el texto dentro del enlace */
+    border: none;
     transition:background-color .3s ease; /** Añade una transición suave al color de fondo del enlace */
 }
 .btn:hover{
+    cursor: pointer; /** Cambia el cursor a una mano al pasar el cursor sobre el enlace */
     background-color: #5a7801; /** Cambia el color de fondo al pasar el cursor */
 }
 /*todo : Utilidades */
@@ -398,4 +400,46 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
    width: 40rem;
     height: 40rem; /** Establece una altura de 400px para las imágenes */
     object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+}
+
+/*!PAGINA CONTACTO*/
+/*TODO: formulario de contacto */
+.formulario{
+    max-width: 60rem;
+    margin: 0 auto; /** Centra el formulario horizontalmente */
+}
+
+.formulario fieldset{
+    border: 1px solid #ccc; /** Añade un borde de 1px de color gris claro */
+    padding: 2rem; /** Añade un padding de 20px alrededor del fieldset */
+    margin-bottom: 2rem; /** Añade un margen inferior de 20px */
+}
+.formulario legend{
+    font-size: 2rem; /** Establece el tamaño de fuente del legend */
+    background-color: #037bc0;
+    width: 100%; /** Hace que el legend ocupe todo el ancho del fieldset */
+    text-transform: uppercase; /** Convierte el texto a mayúsculas */
+    border-radius: 0.5rem; /** Añade un radio de 5px a las esquinas del legend */
+    font-weight: 900; /** Hace que el texto del legend sea negrita */
+    text-align: center; /** Centra el texto dentro del legend */
+    padding: 1rem; /** Añade un padding de 10px alrededor del legend */
+    color: #fff; /** Establece el color del texto en blanco */
+    margin-bottom: 1rem; /** Añade un margen inferior de 10px */
+}
+
+.campo{
+    margin-bottom: 1.5rem; /** Añade un margen inferior de 15px */
+
+    display: flex; /** Utiliza flexbox para organizar los elementos */
+}
+.campo label{
+    flex-basis: 10rem; /** Establece el ancho del label al 100% del contenedor */
+   
+    font-weight: bold; /** Hace que el texto del label sea negrita */
+}
+.campo input:not([type="radio"]), .campo textarea{
+    flex: 1; /** Hace que el input ocupe todo el espacio disponible */
+    padding: 1rem; /** Añade un padding de 10px alrededor del input */
+    border-radius: 0.5rem; /** Añade un radio de 5px a las esquinas del input */
+    border: 1px solid #ccc; /** Añade un borde de 1px de color gris claro */
 }

@@ -36,7 +36,7 @@
     
     <h2 class="text-center">Contacto</h2>
 
-    <form action="">
+    <form class="formulario" action="">
             <fieldset>
                 <legend> Tus Datos</legend>
                 <div class="campo">
@@ -83,7 +83,23 @@
                 <div class="campo">
                     <label for="proveedor">Proveedor</label>
                     <input type="radio" name="tipo" >
+                </div>
+               <div class="campo">
+                    <label for="otro">Otro</label>
+                    <input type="text" id="otro" name="otro" list="otros" />
+                    <datalist id="otros">
+                        <option value="Cocina">
+                        <option value="Jardín">
+                        <option value="Cochera">
+                        <option value="Recamara">
+                        <option value="Sala">
+                        <option value="Oficina">
+                        <option value="Exterior">
+                    </datalist>
+                </div>
+
             </fieldset>
+            <input type="submit" value="Enviar formulario" class="btn">
     </form>
 
 </main>
