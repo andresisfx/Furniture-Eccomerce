@@ -29,14 +29,31 @@ h1,h2,h3{
     font-family: "Playfair Display", serif; /** Establece la fuente Playfair Display para los encabezados h1 */
 }
 h1{
-    font-size: 4rem; /** Establece el tamaño de fuente del encabezado h1 */
+    font-size: 3rem; /** Establece el tamaño de fuente del encabezado h1 Mobile-First */
     margin: 0 0 2rem 0; /** Añade un margen inferior de 20px */
 }
+
+@media (min-width: 786px){
+    h1 {
+        font-size: 4rem;
+    }
+}
 h2{
+    font-size: 2.3rem; /** Establece el tamaño de fuente del encabezado h2 */
+}
+@media (min-width:786px){
+    h2{
     font-size: 3rem; /** Establece el tamaño de fuente del encabezado h2 */
+    }
 }
 h3{
+    font-size: 1.5rem;
+}
+@media (min-width: 786px) {
+    h3{
     font-size: 2rem;
+
+    }
 }
 
 .contenedor{
@@ -88,12 +105,12 @@ border-top: 0.1rem  solid #ccc; /** Añade un borde superior de 1px de color gri
     
     margin-bottom: 5rem;
     text-align: center;
-    font-size: 4rem; /** Establece el tamaño de fuente del nombre del sitio */
+   
 }
 .nombre-sitio span {
     color: #037bc0;
     font-weight: bold;
-    font-size: 4rem;
+    
 }
 /*!ESPECIFICIDAD EN CSS*/
 /** En CSS, los estilos con mayor especificidad tienen más prioridad. El orden va así: primero los estilos en línea (style=""), luego los selectores de ID (#id), después las clases, atributos y pseudoclases (.clase, [type], :hover), y por último los elementos (div, h1, etc.) y pseudoelementos (::before). Si hay conflicto, gana el que tenga mayor especificidad. Si están empatados, se aplica el que esté más abajo en el archivo CSS.  style id   class   etiqueta
