@@ -36,25 +36,23 @@ const botonMenu = document.getElementById('hamburger'); // Ajusta este selector
 // }); 
 
 botonMenu.addEventListener('click',function(){
-    if(nav.classList.contains('menu-active')){
-        nav.style.transition='height 0.4s, transform 0.4s, opacity 0.3s';
-     
-        nav.style.opacity='0';
-        
-        setTimeout(() => {
-            document.body.style.overflow='auto';
-            nav.classList.remove('menu-active');
-            nav.style.transition=''
-        }, 500);
+ if(nav.classList.contains('menu-active')){
+    nav.style.transition='height 0.4s, opacity 0.4s, transform 0.4s';
+    nav.style.opacity='0';
 
-    }else{
-        nav.classList.add('menu-active');
-        document.body.style.overflow='hidden'
+    setTimeout(() => {
+        document.body.style.overflow='auto';
+        nav.classList.remove('menu-active');
+        nav.style.transition=''
+    }, 500);
+ }else{
+    document.body.style.overflow='hidden'
+    nav.classList.add('menu-active')
 
-        requestAnimationFrame(()=>{
-            nav.style.transition='height 0.4, transform 0.4, opacity 0.4s'
-            nav.style.opacity='1'
-            nav.style.transform='translateY(0)'
-        })
-    }
+    requestAnimationFrame(()=>{
+        nav.style.transition='height 0.4s, opacity 0.4s, transform 0.4s';
+        nav.style.opacity='1';
+        nav.style.transform='translateY(0)'
+    })
+ }
 })

@@ -210,10 +210,17 @@ h3{
 /*TODO:background image*/
 .hero{
     background-image: url("../Imagenes-Ecommerce/principal.jpg");
-    height: 55rem;
+    height: 25rem;
     background-repeat: no-repeat; /** Evita que la imagen de fondo se repita */
     background-size: cover; /** Asegura que la imagen cubra todo el contenedor */
     background-position: center center; /** Centra la imagen de fondo, también podemos situal arriba con top, abajo con : bottom, a la derecha   */
+}
+
+@media (min-width: 786px) {
+    .hero{
+    height: 55rem;
+        
+    }
 }
 
 
@@ -236,25 +243,46 @@ h3{
 /**grid-area: header; asigna el área de la cuadrícula al elemento, permitiendo que se posicione en una ubicación específica dentro del grid*/
 .categorias h2{
   text-align: center; /** Centra el texto del encabezado */
-  margin-bottom: 2rem; /** Añade un margen inferior de 20px */
-  padding-top: 5rem;
+  margin-bottom: 1rem; /** Añade un margen inferior de 20px */
+  padding-top: 0;
+}
+.categoria img{
+    width: 100%;
 }
 .categoria a{
  text-align: center; 
  display: block; /** Agregamos esto ya que la etiqueta <a/> por defecto tiene display inline y no deja desplazarla a los lados  */
  padding: 1rem;
+ transition: all 0.5s ease;
 }
 .categoria a:hover{
     background-color: #037bc0; /** Cambia el color de fondo al pasar el cursor */
     color: #fff; /** Cambia el color del texto al pasar el cursor */
     padding: 1rem; /** Añade un padding de 10px al pasar el cursor */
     border-bottom-right-radius: 1rem; /** Añade un radio de 10px al borde inferior derecho */
+    transition: all 0.5s ease;
 }
 .listado-categorias{
     display: grid; /** Utiliza grid para organizar los elementos */
+    grid-template-rows: repeat(3, 2fr); /** Crea 3 filas de igual tamaño */
+    grid-template-columns: none; /** anulas las columnas que las mediaqueries crean */
+    gap: 2rem; /** Establece un espacio de 20px entre las columnas;  existe column-gap y row-gap pero gap aplica para las dos  */
+    margin-top: 0.5rem; /** Añade un margen superior de 50px */
+}
+
+@media (min-width: 786px) {
+    .categorias h2{
+    
+        margin-bottom: 2rem; /** Añade un margen inferior de 20px */
+        padding-top: 5rem;
+    }
+    .listado-categorias{
+    display: grid; /** Utiliza grid para organizar los elementos */
     grid-template-columns: repeat(3, 2fr); /** Crea 3 columnas de igual tamaño */
+    grid-template-rows: none;
     gap: 2rem; /** Establece un espacio de 20px entre las columnas;  existe column-gap y row-gap pero gap aplica para las dos  */
     margin-top: 5rem; /** Añade un margen superior de 50px */
+}
 }
 
 /*TODO:  sección  "sobre nosotros  */
