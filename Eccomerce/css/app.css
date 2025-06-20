@@ -288,18 +288,18 @@ h3{
 /*TODO:  sección  "sobre nosotros  */
 
 .sobre-nosotros{
-    background-image: linear-gradient(to right,transparent 50% , rgb(216, 215, 215) 50%, #037bc0 50%),url(/Imagenes-Ecommerce/nosotros.jpg); 
-    background-repeat: no-repeat; /** Evita que la imagen de fondo se repita */
-    padding: 10rem 0;/** Añade un padding de 100px en la parte superior e inferior y así la imagen se ve  más alta lo mismo que el gradiente*/
-    background-position: left center; /** Centra la imagen de fondo a la izquierda */
-    background-size: 100%,120rem; /** aquí coloca 100% al linear gradiente que está de primero y luego le da los 120 rem a la url que se encuentra después */
+    background-image: linear-gradient(to bottom,transparent 50% , rgb(216, 215, 215) 50%, #037bc0 50%),url(/Imagenes-Ecommerce/nosotros.jpg); 
+    background-repeat: no-repeat;
+   background-position: left center; /** Centra la imagen de fondo a la izquierda */
+   background-size: 100%,70rem; /** aquí coloca 100% al linear gradiente que está de primero y luego le da los 120 rem a la url que se encuentra después */
+
 }
 
 .sobre-nosotros-grid{
     display: grid; /** Utiliza grid para organizar los elementos */
-    grid-template-columns: repeat(2, 1fr); /** Crea 2 columnas de igual tamaño */
+    grid-template-rows: repeat(2, 1fr); /** Crea 2 columnas de igual tamaño */
 
-    column-gap: 4rem;  /**Establece un espacio de 40px entre las columnas , pero el mismo efecto se logra en la siguiente clase donde le añadimos un pading de 2 rem, pero en css grid se suelen utilizar gaps y no padding */
+    row-gap: 2rem;  /**Establece un espacio de 40px entre las columnas , pero el mismo efecto se logra en la siguiente clase donde le añadimos un pading de 2 rem, pero en css grid se suelen utilizar gaps y no padding */
 }
 
 /*Todo:  texto sobre nosotros con display-grid */
@@ -311,16 +311,41 @@ h3{
 
 
 /*todo: sobre nosotros con flexbox */
-.sobre-nosotros-grid {
- display:flex;
- justify-content: flex-end; /** Alinea los elementos al final del contenedor */
-}
-.contenedor-texto{
-     flex-basis: 46%; /** Establece el ancho del contenedor de texto al 46% del contenedor principal , esto con el fin de que el texto se vea más a la derecha */
 
-     padding-left: 10rem; /** Añade un padding de 100px a la izquierda para separar el texto de la imagen */
+.contenedor-texto{
+     
+     grid-row: 2/3;
+     padding: 1rem; /** Añade un padding de 100px a la izquierda para separar el texto de la imagen */
      color: #fff;
     
+}
+@media (min-width: 786px) {
+
+        .sobre-nosotros{
+            background-image: linear-gradient(to right,transparent 50% , rgb(216, 215, 215) 50%, #037bc0 50%),url(/Imagenes-Ecommerce/nosotros.jpg); 
+            background-repeat: no-repeat; /** Evita que la imagen de fondo se repita */
+            padding: 10rem 0;/** Añade un padding de 100px en la parte superior e inferior y así la imagen se ve  más alta lo mismo que el gradiente*/
+            background-position: left center; /** Centra la imagen de fondo a la izquierda */
+            background-size: 100%,120rem; /** aquí coloca 100% al linear gradiente que está de primero y luego le da los 120 rem a la url que se encuentra después */
+        }
+        .sobre-nosotros-grid{
+            display: grid; /** Utiliza grid para organizar los elementos */
+            grid-template-columns: repeat(2, 1fr); /** Crea 2 columnas de igual tamaño */
+            height: 20rem;
+            column-gap: 4rem;  /**Establece un espacio de 40px entre las columnas , pero el mismo efecto se logra en la siguiente clase donde le añadimos un pading de 2 rem, pero en css grid se suelen utilizar gaps y no padding */
+        }
+        .contenedor-texto{
+     
+            grid-column: 2/3;
+            padding-left: 10rem; /** Añade un padding de 100px a la izquierda para separar el texto de la imagen */
+            color: #fff;
+            
+            
+        }
+        .contenedor-texto h2{
+            margin-top: 0;
+        }
+
 }
 
 /*!CUANDO UTILIZAMOS FLEXBOX Y GRID ??*/
