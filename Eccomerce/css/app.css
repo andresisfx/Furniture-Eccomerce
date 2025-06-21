@@ -108,8 +108,9 @@ h3{
         height: 0;
         justify-content: space-around;
         transition:height 0.4s, transform 0.4s;
-        transform: translateY(-100%);
+        transform: translateY(-300%);
     }
+    
    .menu-active{
     display: flex;
     transform: translateY(0);
@@ -117,6 +118,13 @@ h3{
     height: 70vh;
     padding:1rem;
     
+   }
+   .subir-anclas{
+        transform: translateY(-500px);
+    }
+   .bajar-anclas{
+      transform: translateY(0);
+      transition: transform 0.4s;
    }
 
 @media (min-width:786px){
@@ -135,6 +143,9 @@ h3{
         justify-content: space-evenly;
         opacity: 1;
         
+    }
+    .nav-principal a {
+        transform: translateY(0);
     }
     .nombre-sitio{
         
@@ -310,7 +321,7 @@ h3{
 } */
 
 
-/*todo: sobre nosotros con flexbox */
+/*todo: Section sobre nosotros con flexbox */
 
 .contenedor-texto{
      
@@ -358,66 +369,80 @@ h3{
     padding-top: 5rem;
 }
 
-.listado-productos{
-    display: grid; 
-    grid-template-columns: repeat(6, 1fr); /** Crea 6 columnas de igual tamaño */
-    /**column-gap: 2rem;  Establece un espacio de 20px entre las columnas */
-   /** row-gap: 2rem;  Establece un espacio de 20px entre las filas */
-   gap: 2rem; /** Establece un espacio de 20px entre las filas y columnas, osea remplaza las dos lineas anteriores */
+@media (min-width: 786px) {
+    
+        .listado-productos{
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr); /** Crea 6 columnas de igual tamaño */
+            /**column-gap: 2rem;  Establece un espacio de 20px entre las columnas */
+        /** row-gap: 2rem;  Establece un espacio de 20px entre las filas */
+        gap: 2rem; /** Establece un espacio de 20px entre las filas y columnas, osea remplaza las dos lineas anteriores */
 
- 
-}
-.producto:nth-child(1){
- /*? grid-column: 1/7;  Hace que el primer producto ocupe las 6 columnas */
- grid-column-start: 1; /** Establece el inicio de la columna en la primera columna */
- grid-column-end: 7; /** Establece el final de la columna en la séptima columna, lo que hace que ocupe las 6 columnas */
- display: grid;
- grid-template-columns: 3fr 1fr;/** Crea 2 columnas de igual tamaño dentro del primer producto */
+        
+        }
+        .producto:nth-child(1){
+        /*? grid-column: 1/7;  Hace que el primer producto ocupe las 6 columnas */
+        grid-column-start: 1; /** Establece el inicio de la columna en la primera columna */
+        grid-column-end: 7; /** Establece el final de la columna en la séptima columna, lo que hace que ocupe las 6 columnas */
+        display: grid;
+        grid-template-columns: 3fr 1fr;/** Crea 2 columnas de igual tamaño dentro del primer producto */
 
-}
-.producto:nth-child(1)img{
-    height: 43rem;
-    width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
-    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
-}
-.producto:nth-child(2){
-    grid-column-start: 1; /** Establece el inicio de la columna en la primera columna */
-    grid-column-end: 4; /** Establece el final de la columna en la cuarta columna, lo que hace que ocupe las 3 primeras columnas */
-}
-.producto:nth-child(2)img{
-    height: 30rem;
-    width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
-    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
-}
-.producto:nth-child(3){ 
-    grid-column-start: 4; 
-    grid-column-end: 7; 
-}
-.producto:nth-child(3)img{
-    height: 30rem;
-    width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
-    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
-}
-.producto:nth-child(4){
-    grid-column-start: 1; 
-    grid-column-end: 3;
-}
-.producto:nth-child(4)img{
-    height: 43rem;
-    width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
-    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
-}
-.producto:nth-child(5){
-    grid-column-start: 3; 
-    grid-column-end: 5;
-}
-.producto:nth-child(6){
-    grid-column-start: 5; 
-    grid-column-end: 7;
+        }
+        .producto:nth-child(1)img{
+            height: 43rem;
+            width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
+            object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        }
+        .producto:nth-child(2){
+            grid-column-start: 1; /** Establece el inicio de la columna en la primera columna */
+            grid-column-end: 4; /** Establece el final de la columna en la cuarta columna, lo que hace que ocupe las 3 primeras columnas */
+        }
+        .producto:nth-child(2)img{
+            height: 30rem;
+            width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
+            object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        }
+        .producto:nth-child(3){ 
+            grid-column-start: 4; 
+            grid-column-end: 7; 
+        }
+        .producto:nth-child(3)img{
+            height: 30rem;
+            width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
+            object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        }
+        .producto:nth-child(4){
+            grid-column-start: 1; 
+            grid-column-end: 3;
+        }
+        .producto:nth-child(4)img{
+            height: 43rem;
+            width: 100%; /** Asegura que la imagen ocupe todo el ancho del contenedor */
+            object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        }
+        .producto:nth-child(5){
+            grid-column-start: 3; 
+            grid-column-end: 5;
+        }
+        .producto:nth-child(6){
+            grid-column-start: 5; 
+            grid-column-end: 7;
+        }
+        
 }
 
 .producto{
     background-color: #037bc0; /** Establece el color de fondo del producto */
+    margin-bottom: 2rem;
+}
+.producto:last-of-type{
+    margin-bottom: 0;
+}
+
+@media (min-width: 786px) {
+    .producto:last-of-type{
+        margin-bottom: 2rem;
+    }
 }
 .texto-producto{
     padding: 2rem; /** Añade un padding de 20px alrededor del texto del producto */
@@ -454,93 +479,158 @@ h3{
     
     margin-bottom: .5rem; /** Añade un margen inferior de 10px */
 }
+.site-footer p{
+    text-align: center;
+}
 /*!alternativa con grid */
-.grid-footer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem; /** Establece un espacio de 20px entre las columnas */
-}
-.footer-menu a{
-    display: block; /** Hace que el menú del footer se comporte como un bloque en línea, permitiendo establecer dimensiones y márgenes */
-}
-.copy-right{
-    text-align: center; /** Centra el texto dentro del elemento */
-    margin-top: 5rem; /** Añade un margen superior de 20px */
-    font-size: 1.4rem; /** Establece el tamaño de fuente del texto de derechos de autor */
-    color: #666; /** Establece el color del texto en gris claro */
-}
 
+ .grid-footer{
+     display: grid;
+     grid-template-rows: repeat(3, 1fr);
+     grid-template-columns: unset;
+     
+     gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+    }
+ .grid-footer h3{
+    text-align: center;
+    margin-top: 0;
+ }  
+ .footer-menu {
+     display: flex; /** Hace que el menú del footer se comporte como un bloque en línea, permitiendo establecer dimensiones y márgenes */
+     flex-direction: column;
+     align-items: center;
+  }
+ 
+@media (min-width: 786px) {
+    
+
+        .grid-footer{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: unset;
+
+            gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+        }
+        .footer-menu a{
+            display: block; /** Hace que el menú del footer se comporte como un bloque en línea, permitiendo establecer dimensiones y márgenes */
+        }
+        .copy-right{
+            text-align: center; /** Centra el texto dentro del elemento */
+            margin-top: 5rem; /** Añade un margen superior de 20px */
+            font-size: 1.4rem; /** Establece el tamaño de fuente del texto de derechos de autor */
+            color: #666; /** Establece el color del texto en gris claro */
+        } 
+}
 
 
 
 /*!PAGINA  NOSOTROS*/
 
 /*TODO : Contenido nosotros */
-.contenido-nosotros{
+.contenido-principal{
+    padding-top: 0;
+}
+
+
+
+.contenido-nosotros {
     display: grid; /** Utiliza grid para organizar los elementos */
-    grid-template-columns: repeat(2, 1fr); /** Crea 2 columnas de igual tamaño */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /** Crea columnas que se ajustan automáticamente al tamaño del contenedor, con un ancho mínimo de 300px y un ancho máximo de 1fr (una fracción del espacio disponible) */
-    gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+    
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); /** Crea columnas que se ajustan automáticamente al tamaño del contenedor, con un ancho mínimo de 300px y un ancho máximo de 1fr (una fracción del espacio disponible) */
+    gap: 0; /** Establece un espacio de 20px entre las columnas */
     margin-top: 5rem; /** Añade un margen superior de 50px */
 }
 
-.informacion-nosotros{
+.informacion-nosotros {
     display: flex; /** Utiliza flexbox para organizar los elementos */
     flex-direction: column; /** Organiza los elementos en una columna */
     justify-content: center; /** Centra los elementos verticalmente */
     align-items: center; /** Centra los elementos horizontalmente */
     padding: 2rem; /** Añade un padding de 20px alrededor del contenedor */
 }
+@media (min-width: 786px) {
 
+    .contenido-principal{
+       padding-top: 0;
+    }
+    .contenido-nosotros {
+        display: grid; /** Utiliza grid para organizar los elementos */
+        grid-template-columns: repeat(2, 1fr); /** Crea 2 columnas de igual tamaño */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /** Crea columnas que se ajustan automáticamente al tamaño del contenedor, con un ancho mínimo de 300px y un ancho máximo de 1fr (una fracción del espacio disponible) */
+        gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+        margin-top: 5rem; /** Añade un margen superior de 50px */
+    }
+}
 
 /*!PAGINA BLOG*/
 /*todo: CONTENEDOR BLOG*/
-.contenedor-blog{
-    display: grid; /** Utiliza grid para organizar los elementos */
-    grid-template-columns: repeat(2, 1fr); /** Crea 3 columnas de igual tamaño */
-    gap: 2rem; /** Establece un espacio de 20px entre las columnas */
-    margin-top: 5rem; /** Añade un margen superior de 50px */
-}
-.entrada{
-    border-bottom: 1px solid #ccc; /** Añade un borde inferior de 1px de color gris claro */
-    padding-bottom: 2rem; /** Añade un padding de 20px en la parte inferior */
-    margin-bottom: 2rem; /** Añade un margen inferior de 20px */
-}
-.entrada:last-of-type{
-    border-bottom: none; /** Elimina el borde inferior del último elemento */
-}
-.entrada-meta{
-    display: flex; /** Utiliza flexbox para organizar los elementos */
-    justify-content: space-between; /** Distribuye el espacio entre los elementos */
-    align-items: center; /** Centra los elementos verticalmente */
-    margin-bottom: 1rem; /** Añade un margen inferior de 10px */
-}
-.entrada-meta p{
-  font-weight: bold;
-}
-.entrada-meta span{
-   color: #037bc0;
-}
-.contenido-entrada-blog{
-    width: 60rem;
-    margin: auto; /** Centra el contenido horizontalmente */
-}
 
+@media (min-width: 786px) {
+    
+        .contenedor-blog{
+            display: grid; /** Utiliza grid para organizar los elementos */
+            grid-template-columns: repeat(2, 1fr); /** Crea 3 columnas de igual tamaño */
+            gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+            margin-top: 5rem; /** Añade un margen superior de 50px */
+        }
+        .entrada{
+            border-bottom: 1px solid #ccc; /** Añade un borde inferior de 1px de color gris claro */
+            padding-bottom: 2rem; /** Añade un padding de 20px en la parte inferior */
+            margin-bottom: 2rem; /** Añade un margen inferior de 20px */
+        }
+        .entrada:last-of-type{
+            border-bottom: none; /** Elimina el borde inferior del último elemento */
+        }
+        .entrada-meta{
+            display: flex; /** Utiliza flexbox para organizar los elementos */
+            justify-content: space-between; /** Distribuye el espacio entre los elementos */
+            align-items: center; /** Centra los elementos verticalmente */
+            margin-bottom: 1rem; /** Añade un margen inferior de 10px */
+        }
+        .entrada-meta p{
+        font-weight: bold;
+        }
+        .entrada-meta span{
+        color: #037bc0;
+        }
+        .contenido-entrada-blog{
+            width: 60rem;
+            margin: auto; /** Centra el contenido horizontalmente */
+        }
+}
 /*!PAGINA GALERIA*/
-.galeria{
-    list-style: none; /** Elimina los puntos de la lista */
-    margin: 0;
-    padding: 0; /** Elimina el padding por defecto de la lista */
-    display: grid; /** Utiliza grid para organizar los elementos */
-    grid-template-columns: repeat(3, 1fr); /** Crea 3 columnas de igual tamaño */
-    gap: 2rem; /** Establece un espacio de 20px entre las columnas */
 
-   
+
+.galeria { 
+   list-style: none; /** Elimina los puntos de la lista */
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+   grid-auto-rows: minmax(200px,auto);
+   gap: 1rem;
+   margin-left: 0;
+   padding-left: 0;
 }
 .galeria img{
-   width: 40rem;
-    height: 40rem; /** Establece una altura de 400px para las imágenes */
-    object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+            width: 100%;
+            height: auto; /** Establece una altura de 400px para las imágenes */
+            object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        }
+@media (min-width: 786px) {
+    
+
+        .galeria{ 
+            list-style: none; /** Elimina los puntos de la lista */
+            margin: 0;
+            padding: 0; /** Elimina el padding por defecto de la lista */
+            display: grid; /** Utiliza grid para organizar los elementos */
+            grid-template-columns: repeat(3, 1fr); /** Crea 3 columnas de igual tamaño */
+            gap: 2rem; /** Establece un espacio de 20px entre las columnas */
+        }
+        .galeria img{
+            width: 40rem;
+            height: 40rem; /** Establece una altura de 400px para las imágenes */
+            object-fit: cover; /** Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        }
 }
 
 /*!PAGINA CONTACTO*/
